@@ -13,9 +13,8 @@ import javax.ws.rs.core.MediaType;
 public class HelloWorldService {
 
     @GET
-    @Path("{param}")
     @Produces(MediaType.TEXT_PLAIN)
-    public String getMsg(@PathParam("param") String msg) {
-        return "Hello  : " + msg;
+    public String getMsg() {
+        return "Hello";
     }
 }
