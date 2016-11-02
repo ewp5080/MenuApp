@@ -29,3 +29,5 @@ dependencies {
 
 task stage(dependsOn: ['build', 'clean'])
 build.mustRunAfter clean
+
+war.archiveName "menuapp.war"
