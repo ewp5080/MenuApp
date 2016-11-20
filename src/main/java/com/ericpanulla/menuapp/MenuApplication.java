@@ -1,4 +1,4 @@
-package com.ericpanulla.testgradle;
+package com.ericpanulla.menuapp;
 
 import javax.ws.rs.core.Application;
 import java.util.HashSet;

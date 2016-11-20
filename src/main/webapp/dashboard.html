@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <meta name="viewport" content="width=device-width, intial-scale=1"> 
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+        <script src="dependencies/angular.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers/MenuFeedController.js"></script>
+    </head>
+    <body>
+        <div class="container" ng-app="menuApp">
+            <div class="row">
+                <div class="col-md-12" id="header" style="margin-top:10px;">
+                    <h1>Dashboard</h1>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-md-8" style="padding-left:25px;"  ng-controller="MenuFeedController">
+                    <div class="menu_panel" ng-repeat="week in weeks">
+                        <h3 class="panel_title">{{week.date}}</h3>
+                        
+                        <ul id="horizontal-list" class="meal_panel" ng-repeat="menu in week.menu">
+                            <li><h4>{{menu.day}}</h4></li>
+                            <li>{{menu.meal.name}}</li>
+                            <li>
+                                <img src="{{menu.meal.img}}"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4" id="sidebar">
+                    <h1 class="panel-title">Side Bar</h1>
+                    Stuff about things and stuffand other things
+                </div>
+            </div>
+        </div>
+    </body>
+</HTML>

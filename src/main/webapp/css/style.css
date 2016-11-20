@@ -1,0 +1,41 @@
+ul{
+    list-style: none;
+}
+
+img{
+    height: 50px;
+    width: 87.5px;
+}
+            
+#horizontal-list{
+    display: inline-block;
+}
+
+#header{
+    background-color: gainsboro; 
+    color:white; 
+}
+
+#header h1{
+    padding:15px;
+}
+
+#sidebar{
+    background-color: gainsboro;
+    margin-top: 20px;
+}
+
+.meal_panel{
+    margin-left:15px; 
+    padding:20px;
+}
+
+.menu_panel{
+    background-color: gainsboro;
+    margin-top: 10px;
+}
+
+.panel_title{
+    padding-top: 10px;
+    padding-left: 10px;
+}

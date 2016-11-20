@@ -1,4 +1,4 @@
-package com.ericpanulla.testgradle;
+package com.ericpanulla.menuapp;
 
 import java.io.IOException;
 
@@ -20,12 +20,13 @@ public class MenuApp extends HttpServlet{
     }
 
     public static void main(String[] args) throws Exception{
-    	 final Server server = new Server(Integer.valueOf(System.getenv("PORT")));
-         final ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-         context.setContextPath("/");
-         server.setHandler(context);
-         context.addServlet(new ServletHolder(new MenuApp()),"/*");
-         server.start();
-         server.join();  
+    	final ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+    	context.setContextPath("/");
+    	context.addServlet(new ServletHolder(new MenuApp()),"/*");
+    	
+    	final Server server = new Server(Integer.valueOf(System.getenv("PORT")));
+        server.setHandler(context);
+        server.start();
+        server.join();  
     }
 }
